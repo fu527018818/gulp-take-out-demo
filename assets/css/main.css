@@ -1,0 +1,98 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; } 
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; } 
+h1, h2, h3, h4, h5, h6{ font-size:100%; } 
+address, cite, dfn, em, var { font-style:normal; } 
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; } 
+small{ font-size:12px; } 
+ul, ol { list-style:none; } 
+a { text-decoration:none; } 
+a:hover { text-decoration:underline; } 
+sup { vertical-align:text-top; } 
+sub{ vertical-align:text-bottom; } 
+legend { color:#000; } 
+fieldset, img { border:0; } 
+button, input, select, textarea { font-size:100%; } 
+table { border-collapse:collapse; border-spacing:0; }
+.container{
+    height: 100%;
+}
+/*顶部标题 top start*/
+.top{
+    background-color:#bb2828;
+}
+.top h3{
+    font-size: 20px;
+    color: #eee;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+/*顶部标题 top end*/
+
+/*页面主体 container start*/
+.main{
+    background-color: #ddd;
+    height: 100%;
+}
+.main .left{
+    width:20%;
+    float: left;
+}
+.main .left ul li{
+    width: 100%;
+    line-height: 30px;
+    border-bottom: solid #bbb 1px;
+} 
+.main .left ul li a{
+    color: #000;
+    padding:5px;
+    font-size: 14px; 
+    width:100%;
+    display: inline-block;
+}
+.main .right{
+    background-color:#fff;
+    width:80%;
+    height: 100%;
+    float: right;
+}
+.main ul li.cur{
+    background-color: #fff;
+}
+/*页面主体 container end*/
+
+/*页面底部 start*/
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom:0;
+    height: 40px;
+    background-color: #fff;
+    box-shadow: 0 -2px 2px grey; /*设置一个阴影效果*/
+}
+.footer span{
+    font-size: 14px;
+    float:left;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 5px;
+}
+.footer .btn-sure-order{
+    float: right;
+    text-decoration:none;
+    width:140px;
+    display: inline-block;
+    text-align: center;
+    height: 36px;
+    line-height: 36px;
+    background-color: #bb2828;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+/*页面底部 end*/

@@ -6,5 +6,5 @@ gulp.task('default',function(){
         server:'./'
     })
     gulp.watch('./*.*',browserSync.reload) //监听根目录下的文件
-    gulp.watch('./**/*.*',browserSync.reload) //监听当前根目录下所有文件的变化,自动刷新浏览器
+    gulp.watch('./assets/**/*.*',browserSync.reload) //监听当前根目录下所有文件的变化,自动刷新浏览器
 })
