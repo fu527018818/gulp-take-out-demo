@@ -1,0 +1,19 @@
+{
+  "name": "20170208",
+  "version": "1.0.0",
+  "description": "实现简单的购物车效果,把购物车数据存储在cookie中",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "shopcart"
+  ],
+  "author": "arivin",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.7",
+    "gulp": "^3.9.1"
+  }
+}
