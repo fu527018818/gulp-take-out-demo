@@ -11,7 +11,7 @@ code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
 small{ font-size:12px; } 
 ul, ol { list-style:none; } 
 a { text-decoration:none; } 
-a:hover { text-decoration:underline; } 
+a:hover { text-decoration:none; } 
 sup { vertical-align:text-top; } 
 sub{ vertical-align:text-bottom; } 
 legend { color:#000; } 
@@ -39,6 +39,7 @@ table { border-collapse:collapse; border-spacing:0; }
     background-color: #ddd;
     height: 100%;
 }
+/*左侧商品分类 start*/
 .main .left{
     width:20%;
     float: left;
@@ -55,15 +56,88 @@ table { border-collapse:collapse; border-spacing:0; }
     width:100%;
     display: inline-block;
 }
+.main ul li.cur{
+    background-color: #eee;
+}
+/*左侧商品分类部分 end  */
+
 .main .right{
-    background-color:#fff;
+    background-color:#eee;
     width:80%;
     height: 100%;
     float: right;
+    overflow: scroll;
+    margin-bottom: 40px;
 }
-.main ul li.cur{
-    background-color: #fff;
+.main .product-item{
+    width: 100%;
+    display: block;
+    padding: 5px;
+    box-sizing: border-box;
 }
+.main .right li{
+    width: 100%;
+    float: left;
+}
+.main .product-item .product-img{
+    width:100%;
+    max-height: 300px;
+    margin: 0 auto;
+    display: block;
+}
+.main .product-item .product-title{
+    font-size:14px;
+    font-weight: bolder;
+}
+.main .product-item .product-desc{
+    font-size:12px;
+    color: #999;
+}
+.main .product-item .product-price{
+    float: left;
+}
+.main .product-item .product-price i{
+    font-size: 14px;
+    color: #f00;
+}
+.main .product-item .action .p-num{
+    border: solid 1px #999;
+    text-align: center;
+    font-size: 16px;
+    width:30px;
+    display: inline-block;
+    /*display: none;*/
+}
+
+.main .product-item .action .p-btn-car{
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #f00;
+    text-align: center;
+    color: #fff;
+}
+/*.main .product-item .action .p-reduce{
+    display: none;
+}*/
+.main .product-item .action{
+    float: right;
+}
+.main .product-item .action .btn-buy{
+    display: inline-block;
+    width: 80px;
+    height: 26px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+    float: right;
+    color: #fff;
+    background-color: #f00;
+}
+
 /*页面主体 container end*/
 
 /*页面底部 start*/
