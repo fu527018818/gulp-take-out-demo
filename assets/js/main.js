@@ -1,4 +1,27 @@
 $(function(){
+    /**
+     * 自己创建一个商品数据集合
+     * 点击分类时实现商品的切换
+     * 切换之后已经选择好的数量需要记录
+     */
+    var arrAllProducts = [
+        {
+            type:"炒菜",
+            products:[
+                {id:10001,name:"回锅肉",img:"...",price:26.00,desc:"川菜馆必点"},
+                {id:10002,name:"鱼香肉丝",img:"...",price:28.00,desc:"川菜馆必点"},
+                {id:10003,name:"宫保鸡丁",img:"...",price:20.00,desc:"川菜馆必点"}
+            ]
+        },
+        {
+            type:"商务套餐",
+            products:[
+                {id:20001,name:"荷叶饭",img:"...",price:12.00,desc:"好吃的荷叶饭"},
+                {id:20002,name:"奢华版荷叶饭",img:"...",price:15.00,desc:"精装版"}
+            ]
+        }
+    ]
+
     //左侧导航效果切换
     $('.left li').click(function(){
         $(this).parent().find('li').removeClass('cur') //删除所有li的cur样式
@@ -49,5 +72,13 @@ $(function(){
             arrAllCart.push(obj) //不存在进行插入操作
         }
         console.dir(arrAllCart)
+        var sumCount = 0 //总数量
+        var sumPrice = 0 //总价格
+        arrAllCart.forEach(function(item){
+            sumCount += item.count
+            sumPrice += (item.count * item.price)
+        })
+        $('#sumPCount').text(sumCount)
+        $('#sumPPrice').text(sumPrice.toFixed(2)) //显示的时候保留两位小数点
     }
 })

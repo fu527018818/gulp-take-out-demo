@@ -156,6 +156,11 @@ table { border-collapse:collapse; border-spacing:0; }
     line-height: 40px;
     margin-left: 5px;
 }
+.footer span em{
+    color: #f00;
+    font-weight: bold;
+    font-size: 16px;
+}
 .footer .btn-sure-order{
     float: right;
     text-decoration:none;
