@@ -1,35 +1,4 @@
 $(function(){
-    /**
-     * 自己创建一个商品数据集合
-     * 点击分类时实现商品的切换
-     * 切换之后已经选择好的数量需要记录
-     */
-    var arrAllProducts = [
-        {
-            type:"炒菜",
-            products:[
-                {id:10001,name:"回锅肉",img:"http://recipe0.hoto.cn/pic/recipe/l/fc/2b/207868_8fb010.jpg",price:26.00,desc:"川菜馆必点"},
-                {id:10002,name:"鱼香肉丝",img:"http://recipe0.hoto.cn/pic/recipe/g_148/e8/94/234728_226424.jpg",price:28.00,desc:"川菜馆必点"},
-                {id:10003,name:"宫保鸡丁",img:"http://recipe0.hoto.cn/pic/recipe/g_148/6a/da/252522_0d88b3.jpg",price:20.00,desc:"川菜馆必点"}
-            ]
-        },
-        {
-            type:"商务套餐",
-            products:[
-                {id:20001,name:"荷叶饭",img:"http://recipe0.hoto.cn/pic/recipe/g_148/72/61/1073522_c9b4af.jpg",price:12.00,desc:"好吃的荷叶饭"},
-                {id:20002,name:"奢华版荷叶饭",img:"http://recipe0.hoto.cn/pic/recipe/g_148/40/f8/849984_c84667.jpg",price:15.00,desc:"精装版"}
-            ]
-        },
-        {
-            type:"主食",
-            products:[]
-        },
-        {
-            type:"其他",
-            products:[]
-        }
-    ]
-
 
     //左侧导航效果切换
     $('.left li').click(function(){
@@ -138,4 +107,15 @@ $(function(){
         $('#pList').html(strHtml)  
     }
     initPList(arrAllProducts[0].products) //页面初始化的时候加载炒菜的数据
+
+    //确认提交订单按钮点击事件
+    $('.btn-sure-order').click(function(){
+        //把所选择的购物商品信息加入cookie
+        //此处使用jquery-cookie插件
+        //地址为:https://github.com/carhartl/jquery-cookie
+        //path      路径,此处设置在整个网站有效
+        //expires   存在时间,此处设置有效期为7天
+        $.cookie('shopcart',JSON.stringify(arrAllCart),{path:'/',expires:7})
+        window.location.href = "order.html"//页面跳转
+    })
 })

@@ -1,0 +1,66 @@
+/*订单详情部分 start*/
+.main .order-product{
+    display: none;
+}
+.main .order-product .o-p-item{
+    padding: 0 10%;
+}
+.main .order-product .o-p-item .o-p-img{
+    width:100px;
+    height: 100px;
+}
+.main .order-product .o-p-item ul{
+    float: right;
+    margin-right: 2%;
+    margin-top: 10px;
+    height: 100px;
+    width:100%;
+}
+.main .order-product .o-p-item ul li{
+    float: left;
+    margin-left: 10px;
+    line-height: 100px;
+}
+.main .order-product .o-p-item ul em{
+    color: #f00;
+}
+.main .order-product .o-p-item .o-p-price{
+    text-align: center;
+}
+.main .order-detail{
+    color: #999;
+    font-size: 14px;
+}
+.main .order-detail em{
+    color: #f00;
+}
+/*订单详情部分 end*/
+.btn{
+    display: block;
+    width:80%;
+    margin-left: 10%;
+    color: #fff;
+    background-color: #bb2828;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 30px;
+}
+.main .order-sub input{
+    width:90%;
+    margin-left: 5%;
+    border-radius: 5px;
+    height: 40px;
+    line-height: normal;
+    margin-top: 5px;
+    border: 0;
+}
+.main .order-sub textarea{
+    width:90%;
+    margin-left: 5%;
+    border-radius: 5px;
+    height: 80px;
+    line-height:normal;
+    margin-top: 5px;
+    border: 0;
+}
