@@ -66,7 +66,6 @@ $(function(){
         else{
             arrAllCart.push(obj) //不存在进行插入操作
         }
-        console.dir(arrAllCart)
         var sumCount = 0 //总数量
         var sumPrice = 0 //总价格
         arrAllCart.forEach(function(item){
@@ -82,7 +81,7 @@ $(function(){
      */
     function initPList(data){
         var strHtml = ''
-        data.forEach(function(item){
+        data.forEach(item=>{
             var tmpP = arrAllCart.find(function(p){
                 return p.pid == item.id
             })

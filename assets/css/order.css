@@ -64,3 +64,8 @@
     margin-top: 5px;
     border: 0;
 }
+#errTip{
+    width: 100%;
+    text-align: center;
+    background-color:orange;
+}

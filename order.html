@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="container">
+    <div class="errTip" id="errTip" style="display: none;">错误提示</div>
         <div class="top">
             <h3>订单提交</h3>
         </div>
@@ -16,23 +17,23 @@
             <div class="order-sub">
                 <ul>
                     <li>
-                        <input name="name" type="text" placeholder="请输入姓名">
+                        <input name="name" type="text" id="txtName" placeholder="请输入姓名">
                     </li>
                     <li>
-                        <input name="mobile" type="text" placeholder="请输入手机号">
+                        <input name="mobile" id="txtMobile" type="text" placeholder="请输入手机号">
                     </li>
                     <li>
-                        <input name="address" type="text" placeholder="请输入收货地址">
+                        <input name="address" id="address" type="text" placeholder="请输入收货地址">
                     </li>
                     <li>
-                        <textarea name="remarks" id="" cols="30" rows="10" placeholder="请输入备注"></textarea>
+                        <textarea name="remarks" id="remarks" id="" cols="30" rows="10" placeholder="请输入备注"></textarea>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" class="btn">确认订单</a>
+                        <a href="javascript:void(0)" id="orderBtn" class="btn">确认订单</a>
                     </li>
                 </ul>
             </div>
-            <a href="javascript:void(0)" class="order-detail">订单总价<em id="orderPrice">129元</em>详情</a>
+            <a href="javascript:void(0)" class="order-detail">订单总价<em id="orderPrice">0元</em>详情</a>
             <div class="order-product">
             </div>
         </div>
