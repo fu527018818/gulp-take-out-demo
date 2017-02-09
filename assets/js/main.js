@@ -36,13 +36,13 @@ $(function(){
         $(this).parent().find('li').removeClass('cur') //删除所有li的cur样式
         $(this).addClass('cur') //为当前标签添加样式
         
-        var tmpType = $(this).find('a').data('type')
+        var tmpType = $(this).find('a').data('type') //获取商品分类值
         var tmpPdata = arrAllProducts.find(function(item){
             if(item.type == tmpType){
                 return item
             }
         })
-        initPList(tmpPdata.products)
+        initPList(tmpPdata.products)//初始化页面html代码
     })
 
     var arrAllCart = [] //所有的加入购物车的商品数据
@@ -117,7 +117,7 @@ $(function(){
             var tmpP = arrAllCart.find(function(p){
                 return p.pid == item.id
             })
-            var tmpCount = 0
+            var tmpCount = 0 //记录的商品数量值 默认为0 如果购物车中存在那么使用购物车中的值
             if(tmpP){
                 tmpCount = tmpP.count
             }
