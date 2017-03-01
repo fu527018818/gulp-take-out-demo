@@ -14,7 +14,8 @@ $(function(){
         initPList(tmpPdata.products)//初始化页面html代码
     })
 
-    var arrAllCart = [] //所有的加入购物车的商品数据
+    var cook = $.cookie('shopcart') || '[]'
+    var arrAllCart = JSON.parse(cook)  //所有的加入购物车的商品数据
 
     //点击商品购买数量增加按钮
     // $('.p-add').click(function(){

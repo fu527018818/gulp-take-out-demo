@@ -65,7 +65,8 @@ gulp.task('babel',function(){
         .pipe(gulp.dest('./assets/js/es2015'))
 })
 // js文件压缩合并生成文件
-//.pipe(order([],{base:'./'})) //排序时添加第二个参数保证排序顺序可用
+
+//.pipe(order([],{base:'./'})) //排序时添加第二个参数保证排序顺序可用  
 gulp.task('minjs',['babel'],function(){
     gulp.src(['./assets/lib/*.js','./assets/js/es2015/common.js','./assets/js/es2015/main.js'])
         .pipe(order(['assets/lib/jquery.min.js','assets/lib/jquery.cookie.min.js','assets/js/es2015/common.js','assets/js/es2015/main.js'],{base:'./'}))
